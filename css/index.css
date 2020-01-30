@@ -70,6 +70,8 @@ body {
 	margin-bottom: 250px;
 }
 
+
+
 a {
 	text-decoration: none;
 	
@@ -78,13 +80,20 @@ a {
 	
 	display: flex;
 }
-
+nav {
+    display: flex;
+	flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1%;
+    
+}
 .navigation {
 	
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	box-sizing: 100%;
+	width: 80%;
 	margin: 1%;
 }
 
@@ -322,5 +331,93 @@ footer {
 	padding: 5%;
 	text-align: center;
 }/* Use your own code or past solution for Great Idea Web Page CSS here! */
+@media(max-width:800px) {
+    nav {
+        flex-direction: column-reverse;
 
+    }
+    .navigation {
+        flex-direction:row;
+        justify-content: space-between;
+        width:100%;
+    }
+    .navigation a {
+        text-align: center;
+        
+    }
+    .header {
+        align-items: center;
+    }
+    .left {
+        justify-content: center;
+        width: 100%;
+        
+    }
+    .header-img {
+        display:none;
+    }
+    .design {
+        height:auto;
+        justify-content: center;
+        align-content: space-around;
+    }
+    .designbox {
+        flex-basis: auto;
+        width: auto;}
+}
+
+
+@media(max-width:500px) {
+    nav {
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+    .navigation {
+        flex-direction:column;
+        justify-content: center;
+        width:100%;
+        border-top: 2px solid grey;
+    }
+    .navigation a {
+        text-align: center;
+        border-bottom: 2px solid grey;
+    }
+   
+    .header {
+        align-items: center;
+    }
+    .left {
+        justify-content: center;
+        width: 100%;
+        
+    }
+    .header-img {
+        display:none;
+    }
+    .over {
+        flex-direction: column;
+        justify-content: center;
+        width:100%;
+    }
+    .under {
+        flex-direction: column;
+        justify-content: center;
+        width:100%;
+    }
+    .over1,.over2,.under1, .under2, .under3 {
+        width:100%;
+    }
+    .design {
+        flex-direction:column;
+        /* flex-wrap: nowrap; */
+        align-content: space-between;
+        height: auto;
+    }
+    .designbox {
+        width: auto;
+    }
+    .end {
+        flex-direction: column;
+    }
+}
 
